@@ -1,62 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Vultora is the fastest Solana sniper bot for meme coin traders and Telegram alpha calls. Featuring OCR, split detection, and contract protection." />
-  <meta name="keywords" content="solana sniper bot, meme coin sniper, crypto sniper, telegram call sniper, ocr solana bot, vultora" />
-  <meta property="og:title" content="Vultora Sniper - Hunt Fast. Exit Smart." />
-  <meta property="og:description" content="Vultora is the fastest Solana sniper bot for meme coin trading, featuring OCR, smart contract detection, and protection." />
-  <meta property="og:image" content="assets/vultora-logo.png" />
-  <meta property="og:url" content="https://vultora.github.io" />
-  <meta name="twitter:card" content="summary_large_image" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vultora is the fastest Solana sniper bot for meme coin traders and Telegram alpha calls. Featuring OCR, split detection, and contract protection.">
+  <meta property="og:title" content="Vultora Sniper - Hunt Fast. Exit Smart.">
+  <meta property="og:image" content="vultora-logo.png">
+  <meta property="og:url" content="https://vultorasniper.github.io/vultora.github.io">
+  <meta name="twitter:card" content="summary_large_image">
   <title>Vultora Sniper - Hunt Fast. Exit Smart.</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Inter', sans-serif; background: #0a0a0a; color: #fff; line-height: 1.6; padding: 2rem; }
-    .container { max-width: 900px; margin: 0 auto; }
-    .logo { width: 180px; }
-    .hero { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1.2rem; margin-bottom: 4rem; }
-    .hero h1 { font-size: 2.5rem; }
-    .hero p { font-size: 1.1rem; max-width: 600px; }
-    .cta-buttons a { display: inline-block; margin: 0.5rem; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; }
-    .cta-buttons .telegram { background: #7e3ff2; color: #fff; }
-    .cta-buttons .twitter { background: #1DA1F2; color: #fff; }
-    .features { margin-top: 3rem; }
-    .features h2 { font-size: 1.8rem; margin-bottom: 1rem; }
-    .features ul { list-style: none; padding-left: 0; }
-    .features li { margin-bottom: 1rem; font-size: 1.05rem; }
-    .proof img { width: 100%; max-width: 100%; border-radius: 8px; margin: 2rem 0; }
-    .status { background: #111; padding: 1rem 1.5rem; border-radius: 8px; margin-top: 3rem; font-size: 1rem; }
-    footer { margin-top: 3rem; text-align: center; font-size: 0.95rem; }
-    a { color: #8b5cf6; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: #0a0a0a;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      padding: 2rem;
+    }
+    a { text-decoration: none; }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+    .hero {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .hero-left {
+      flex: 1;
+    }
+    .hero-right {
+      flex: 1;
+      text-align: left;
+    }
+    .hero img {
+      width: 240px;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+    .cta-buttons a {
+      display: inline-block;
+      margin-right: 1rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      font-weight: 600;
+      color: #fff;
+    }
+    .telegram { background-color: #7e3ff2; }
+    .twitter { background-color: #1DA1F2; }
+
+    .section {
+      margin-top: 4rem;
+    }
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .features ul {
+      list-style: none;
+      padding: 0;
+    }
+    .features li {
+      margin: 0.75rem 0;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+    }
+    .features li::before {
+      content: '✔';
+      color: #8b5cf6;
+      margin-right: 0.5rem;
+    }
+    .proof img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-top: 1.5rem;
+    }
+    .status {
+      background-color: #111;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 2rem;
+    }
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      font-size: 0.95rem;
+    }
+    footer a {
+      color: #bb86fc;
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <section class="hero">
-      <img src="vultora-logo.png" alt="Vultora Logo" class="logo">
-      <h1>Vultora Sniper</h1>
-      <p>The fastest Solana sniper bot built for meme coin traders, alpha callers, and Telegram snipers.</p>
-      <div class="cta-buttons">
-        <a href="https://t.me/VultoraSniperAnouncements" class="telegram">Join Telegram</a>
-        <a href="https://x.com/VultoraSniper" class="twitter">Follow on X</a>
+      <div class="hero-left">
+        <img src="vultora-logo.png" alt="Vultora Logo">
+      </div>
+      <div class="hero-right">
+        <h1>The fastest Solana sniper bot built for meme coin traders, alpha callers, and Telegram snipers.</h1>
+        <div class="cta-buttons">
+          <a href="https://t.me/VultoraSniperAnouncements" class="telegram">Join Telegram</a>
+          <a href="https://x.com/VultoraSniper" class="twitter">Follow on X</a>
+        </div>
       </div>
     </section>
 
-    <section class="features">
+    <section class="section features">
       <h2>Why Vultora?</h2>
       <ul>
-        <li>⚡ <strong>Speed</strong> — CLI-powered snipes with sub-second detection</li>
-        <li>🧠 <strong>Smart OCR</strong> — Reads contract addresses from images</li>
-        <li>🧩 <strong>Split/Obfuscated Detection</strong> — Handles normal, split-style CA formats</li>
-        <li>🛡️ <strong>Protection</strong> — Duplicate filtering and RPC validation</li>
-        <li>📲 <strong>Telegram-Linked</strong> — Reacts to alpha-call messages in real-time</li>
+        <li><strong>Speed</strong> — CLI-powered snipes with sub-second detection</li>
+        <li><strong>Smart OCR</strong> — Reads contract addresses from images</li>
+        <li><strong>Split/Obfuscated Detection</strong> — Handles normal, split-style CA formats</li>
+        <li><strong>Protection</strong> — Duplicate filtering and RPC validation</li>
+        <li><strong>Telegram-Linked</strong> — Reacts to alpha-call messages in real-time</li>
       </ul>
     </section>
 
-    <section class="proof">
+    <section class="section proof">
       <h2>Real-Time Proof</h2>
       <img src="ocr-detection.jpg" alt="Vultora OCR Detection">
       <p><em>Vultora reads, validates, and prepares your snipe in milliseconds — even from image-based contracts.</em></p>
@@ -73,3 +146,4 @@
   </div>
 </body>
 </html>
+
